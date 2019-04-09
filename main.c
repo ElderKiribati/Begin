@@ -1,45 +1,29 @@
-#include <stdio.h>
+s#include <stdio.h>
 
-void rotate (int k, int e);
+void Taboneia ();
+void Rairairi ();
 
 int main (){
     
-    int i, x;
+    FILE *input; //calls the file containing messege to be encrypted
     
-    char str [100];  
+    input = fopen ("input.txt", "r");
     
-    printf ("\n Please enter a string: \t");
-    gets(str);
-    
-    printf ("\n Please choose following options: \n");
-    printf ("1 = Encrypt the string. \n");
-    printf ("2 = Decrypt the string. \n");
-    scanf ("%d", &x);
-    
-    switch (x)
-    {
-        case 1:
-            for (i = 0; (i < 100 && str[i] != '\0'); i++)
-                str[i] = str[i] + 3;
-                
-                printf ("\nEncrypted string: %s\n", str);
-            break;
-                
-        case 2:
-            for (i = 0; (i < 100 && str[i] != '\0'); i++)
-                str[i] = str[i] - 3;
-            
-                printf ("\nDecrypted string: %s\n", str);
-            break;
-            
-        default:
-            printf ("\nError\n");
+    while (feof(input) != EOF){
+        char c;
+        fscanf (input, "%c", &c);
+        
+        printf ("%c", c);
     }
-    
+  
   return 0;
   
-  }
+}
+  
+void Taboneia () {
+    //encryption formula.
+}
 
-void rotate (int k, int e){
-    
+void Rairairi () {
+    //decryption formula.
 }
