@@ -20,11 +20,13 @@ int main (){
   
 }
   
+//encryption function
 void Taboneia () {
-    //encryption function
+
 }
 
+//decryption function
 void Rairairi () {
-    //decryption function
+    
 }
 
