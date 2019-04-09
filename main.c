@@ -22,7 +22,6 @@ int main (){
   
 void Taboneia () {
     //encryption formula.
-    //eat cheese
 }
 
 void Rairairi () {
