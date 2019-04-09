@@ -21,9 +21,9 @@ int main (){
 }
   
 void Taboneia () {
-    //encryption formula.
+    //encryption formula
 }
 
 void Rairairi () {
-    //decryption formula.
+    //decryption formula
 }
