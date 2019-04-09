@@ -1,4 +1,4 @@
-s#include <stdio.h>
+#include <stdio.h>
 
 void Taboneia ();
 void Rairairi ();
@@ -9,7 +9,7 @@ int main (){
     
     input = fopen ("input.txt", "r");
     
-    while (feof(input) != EOF){
+    while (feof(input) == 0){
         char c;
         fscanf (input, "%c", &c);
         
