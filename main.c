@@ -1,32 +1,50 @@
 #include <stdio.h>
 
-void Taboneia ();
-void Rairairi ();
+char Taboneia (int x);
+char Rairairi ();
 
 int main (){
     
     FILE *input; //calls the file containing messege to be encrypted
     
+    char c;
+    
     input = fopen ("input.txt", "r");
     
+    char T;
+    
     while (feof(input) == 0){
-        char c;
+        
         fscanf (input, "%c", &c);
         
-        printf ("%c", c);
+        T = Taboneia (c);
+        
+        printf ("%c %c\n", c, T);
+
     }
-  
-  return 0;
-  
+    return 0;
 }
   
 //encryption function
-void Taboneia () {
-
+char Taboneia (int x) {
+    FILE *input;
+    
+    char t = 0; 
+    
+    input = fopen ("input.txt", "r");
+    
+    while (feof(input) ==0 ){
+       
+        fscanf (input, "%c", &t);
+        
+    
+    }
+    return t;
+    
 }
 
 //decryption function
-void Rairairi () {
-    
+char Rairairi () {
+    return 0;
 }
 
