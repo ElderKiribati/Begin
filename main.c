@@ -14,11 +14,14 @@ int main (){
 //File read function
 char Wareware () {
 
-     char ch;
+     int m;
+     //int K = 0;
+     //int T;
         FILE *file;
         file = fopen("input.txt","r");
-        while ((ch=fgetc(file)) != EOF)
-        printf("%c", ch);
+        while ((m=fgetc(file)) != EOF)
+        //T = m + K;
+        printf("%c", m);
         return 0;
         }
 
