@@ -1,32 +1,37 @@
 #include <stdio.h>
 
-char rotate ();
-
 int main()
 {
-    char c;
+   int i, x;
+   char str[100];
 
-    FILE *input;
-   
-    input = fopen ("input.txt", "r");
-   
-    while (feof (input) == 0){
-        fscanf (input, "%c", &c);
-        
-        printf ("%c %c\n", c, rotate());
-    } 
-   return 0;
-}
-char rotate (){ //encryption
-    char c;
+   printf("\nPlease enter a string:\t");
+   gets(str);
 
-    FILE *input;
-   
-    input = fopen ("input.txt", "r");
-   
-    while (feof (input) == 0){
-        fscanf (input, "%c", &c);
+   printf("\nPlease choose following options:\n");
+   printf("1 = Encrypt the string.\n");
+   printf("2 = Decrypt the string.\n");
+   scanf("%d", &x);
+
+   //using switch case statements
+   switch(x)
+   {
+   case 1:
+      for(i = 0; (i < 100 && str[i] != '\0'); i++)
+        str[i] = str[i] + 3; //the key for encryption is 3 that is added to ASCII value
+
+      printf("\nEncrypted string: %s\n", str);
+      break;
+
+   case 2:
+      for(i = 0; (i < 100 && str[i] != '\0'); i++)
+        str[i] = str[i] - 3; //the key for encryption is 3 that is subtracted to ASCII value
+
+      printf("\nDecrypted string: %s\n", str);
+      break;
+
+   default:
+      printf("\nError\n");
    }
-   c = c + 3;//adds 1 to ASCII value
-   return c; 
+   return 0;
 }
