@@ -39,8 +39,6 @@ int main(){
             
         case 2:/*when '2' is selected the output file containing
                 the encrypted message is opened and then decrypted.*/
-            FILE *output;
-    
             output = fopen ("output.txt", "r");
     
             while (feof (output) == 0){
