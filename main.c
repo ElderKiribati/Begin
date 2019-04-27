@@ -4,13 +4,14 @@ int main(){
     char str[1024];//message to be encrypted
     char str1[1024];// message to be decrypted
     int i, x;
+    int k = 3; // this is the key
     
     FILE *input;
     
     input = fopen ("input.txt", "r");
     
     while (feof (input) == 0){//reads message from file
-        fscanf (input, "%s", &str);
+        fscanf (input, "%[^'\n']s", &str);// "%[^'\n']s", this part reads white space.
     }
     
     printf ("\nChoose from following options: \n");
@@ -26,7 +27,7 @@ int main(){
         
         case 1: //when '1' is entered, 3 is added to the ASCII value
             for (i = 0; (i <100 && str[i] != '\0'); i++)
-                str[i] = str[i] + 3;
+                str[i] = str[i] + k;
             printf ("%s\n", str);
             fprintf (output, "%s", str);//stores encrypted message in a file.
             
@@ -35,7 +36,7 @@ int main(){
         case 2://when '2' is entered, 3 is subracted from the ASCII value.
             
             for (i = 0; (i <100 && str[i] != '\0'); i++)
-                str[i] = str[i] - 3;
+                str[i] = str[i] - k;
             printf ("%s\n", str);
             fprintf (output, "%s", str);//stores encrypted message in a file.
                 
@@ -49,7 +50,7 @@ int main(){
     output = fopen ("output.txt", "r");//reads message from file.
     
     while (feof (output) == 0){
-        fscanf (output, "%s", &str1);
+        fscanf (output, "%[^'\n']s", &str1);// "%[^'\n']s", this part reads white space.
     }
     
     printf ("\nChoose from following options: \n");
@@ -61,7 +62,7 @@ int main(){
         
         case 1: //when '1' is entered, 3 is added to the ASCII value
             for (i = 0; (i < 100 && str1[i] != '\0'); i++)
-                str1[i] = str1[i] + 3;
+                str1[i] = str1[i] + k;
             printf ("%s\n", str1);
             
             break;
@@ -69,7 +70,7 @@ int main(){
         case 2://when '2' is entered 3 is subtracted from the ASCII value.
             
             for (i = 0; (i < 100 && str1[i] != '\0'); i++)
-                str1[i] = str1[i] - 3;
+                str1[i] = str1[i] - k;
             printf ("%s\n", str1); 
                 
             break;
