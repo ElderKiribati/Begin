@@ -26,7 +26,7 @@ int main(){
     switch (x){
         
         case 1: //when '1' is entered, 3 is added to the ASCII value
-            for (i = 0; (i <100 && str[i] != '\0'); i++)
+            for (i = 0; (i <1024 && str[i] != '\0'); i++)
                 str[i] = str[i] + k;
             printf ("%s\n", str);
             fprintf (output, "%s", str);//stores encrypted message in a file.
@@ -35,7 +35,7 @@ int main(){
             
         case 2://when '2' is entered, 3 is subracted from the ASCII value.
             
-            for (i = 0; (i <100 && str[i] != '\0'); i++)
+            for (i = 0; (i <1024 && str[i] != '\0'); i++)
                 str[i] = str[i] - k;
             printf ("%s\n", str);
             fprintf (output, "%s", str);//stores encrypted message in a file.
@@ -61,7 +61,7 @@ int main(){
     switch (x){
         
         case 1: //when '1' is entered, 3 is added to the ASCII value
-            for (i = 0; (i < 100 && str1[i] != '\0'); i++)
+            for (i = 0; (i < 1024 && str1[i] != '\0'); i++)
                 str1[i] = str1[i] + k;
             printf ("%s\n", str1);
             
@@ -69,7 +69,7 @@ int main(){
             
         case 2://when '2' is entered 3 is subtracted from the ASCII value.
             
-            for (i = 0; (i < 100 && str1[i] != '\0'); i++)
+            for (i = 0; (i < 1024 && str1[i] != '\0'); i++)
                 str1[i] = str1[i] - k;
             printf ("%s\n", str1); 
                 
